@@ -44,69 +44,69 @@ const App: FC<Details> = (props) => {
             />
           </SharedElement>
         </View>
-        <View
-          style={{
-            backgroundColor: "#fff",
-            elevation: 1,
-            flex: 1,
-            padding: 20,
-            borderTopRightRadius: 20,
-            borderBottomRightRadius: 20
-          }}
-        >
           <View
             style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center"
+              backgroundColor: "#fff",
+              elevation: 1,
+              padding: 20,
+              borderTopRightRadius: 20,
+              borderBottomRightRadius: 20,
+              flex: 1
             }}
           >
-            <Text
+            <View
               style={{
-                fontSize: 20,
-                color: "#777"
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center"
               }}
             >
-              {props.name}
+              <Text
+                style={{
+                  fontSize: 20,
+                  color: "#777"
+                }}
+              >
+                {props.name}
+              </Text>
+              <Foundation name="male-symbol" size={20} color="#aaa" />
+            </View>
+            <Text
+              style={{
+                color: "#555",
+                fontSize: 13,
+                marginVertical: 5
+              }}
+            >
+              {props.type}
             </Text>
-            <Foundation name="male-symbol" size={20} color="#aaa" />
-          </View>
-          <Text
-            style={{
-              color: "#555",
-              fontSize: 13,
-              marginVertical: 5
-            }}
-          >
-            {props.type}
-          </Text>
-          <Text
-            style={{
-              color: "#aaa",
-              fontSize: 11
-            }}
-          >
-            {props.years} years old
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              marginTop: 10
-            }}
-          >
-            <Ionicons name="location" size={16} color="#3f5956" />
             <Text
               style={{
                 color: "#aaa",
-                fontSize: 13,
-                marginLeft: 8
+                fontSize: 11
               }}
             >
-              Distance: {props.distance} km
+              {props.years} years old
             </Text>
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                marginTop: 10
+              }}
+            >
+              <Ionicons name="location" size={16} color="#3f5956" />
+              <Text
+                style={{
+                  color: "#aaa",
+                  fontSize: 13,
+                  marginLeft: 8
+                }}
+              >
+                Distance: {props.distance} km
+              </Text>
+            </View>
           </View>
-        </View>
       </Pressable>
     </SharedElement>
   );
